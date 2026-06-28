@@ -7,7 +7,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "functions": {
-    "api/[...slug].js": {
+    "api/auth/[action].js": {
+      "maxDuration": 10
+    },
+    "api/orders.js": {
+      "maxDuration": 10
+    },
+    "api/dashboard.js": {
       "maxDuration": 10
     }
   },
