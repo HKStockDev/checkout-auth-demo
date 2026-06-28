@@ -1,0 +1,12 @@
+{
+  "name": "israel-checkout-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Demo: address autocomplete + Stripe payment ID as order reference",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "init:auth": "node scripts/init-auth-db.mjs",
+    "init:orders": "node scripts/init-orders-db.mjs",
+    "generate:data": "node scripts/generate-address-data.mjs"
+  }
+}

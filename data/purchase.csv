@@ -1,0 +1,3 @@
+purchase_id,user_id,session_id,stripe_payment_intent_id,status,created_at,pdf_url
+d3544461787c44cd782e28019a0f19b7,868b4200bc5a2065c5b613dcaa1809a9,sess_83ceded62ec7430f,pi_3a1a7309c95344fec97cdbb6c,confirmed,2026-06-28T18:32:54.255Z,/receipts/d3544461787c44cd782e28019a0f19b7.pdf
+fec211c645f97ad8800c175d6eaa32b4,868b4200bc5a2065c5b613dcaa1809a9,sess_eba4a746add34754,pi_32ad2605821554e5e8fcc1b94,confirmed,2026-06-28T18:37:36.854Z,/receipts/fec211c645f97ad8800c175d6eaa32b4.pdf

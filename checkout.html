@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - special product</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-brand">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Innovation" class="logo-img" width="160" height="40" />
+      </a>
+      <span class="header-tagline">Products</span>
+    </div>
+    <nav class="header-nav">
+      <a href="cart.html" class="nav-link nav-cart">Cart <span id="cart-count" class="cart-badge hidden">0</span></a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="layout-two-col">
+      <form id="checkout-form" class="card" novalidate>
+        <h2>Contact &amp; Payment</h2>
+
+        <div class="form-group">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required placeholder="Your full name" autocomplete="name" />
+          <p class="field-error hidden" data-error-for="name"></p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" autocomplete="email" />
+            <p class="field-error hidden" data-error-for="email"></p>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="050-1234567" value="050-1234567" />
+            <p class="field-error hidden" data-error-for="phone"></p>
+          </div>
+        </div>
+
+        <h3 class="form-section-title">Payment</h3>
+
+        <div class="form-group">
+          <label for="card-name">Name on card</label>
+          <input type="text" id="card-name" name="card-name" required placeholder="As shown on card" autocomplete="cc-name" />
+          <p class="field-error hidden" data-error-for="card-name"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="card-number">Card number</label>
+          <input
+            type="text"
+            id="card-number"
+            name="card-number"
+            required
+            placeholder="1234 5678 9012 3456"
+            inputmode="numeric"
+            autocomplete="cc-number"
+            maxlength="23"
+          />
+          <p class="field-error hidden" data-error-for="card-number"></p>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="card-expiry">Expiry (MM/YY)</label>
+            <input
+              type="text"
+              id="card-expiry"
+              name="card-expiry"
+              required
+              placeholder="MM/YY"
+              inputmode="numeric"
+              autocomplete="cc-exp"
+              maxlength="5"
+            />
+            <p class="field-error hidden" data-error-for="card-expiry"></p>
+          </div>
+          <div class="form-group">
+            <label for="card-cvv">CVV</label>
+            <input
+              type="text"
+              id="card-cvv"
+              name="card-cvv"
+              required
+              placeholder="123"
+              inputmode="numeric"
+              autocomplete="cc-csc"
+              maxlength="4"
+            />
+            <p class="field-error hidden" data-error-for="card-cvv"></p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn" disabled>Place Order</button>
+      </form>
+
+      <aside class="card checkout-summary">
+        <h2>Order Summary</h2>
+        <div id="summary-items"></div>
+        <div class="order-summary-item">
+          <span>Shipping</span>
+          <span>Free</span>
+        </div>
+        <div class="order-summary-total">
+          <span>Total</span>
+          <span id="summary-total">-</span>
+        </div>
+
+        <p style="margin-top: 1rem; font-size: 0.875rem;">
+          <a href="cart.html">← Edit cart</a>
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/checkout.js"></script>
+</body>
+</html>

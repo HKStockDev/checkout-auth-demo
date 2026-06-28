@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmed - special product</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-brand">
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Innovation" class="logo-img" width="160" height="40" />
+      </a>
+      <span class="header-tagline">Products</span>
+    </div>
+    <nav class="header-nav">
+      <a href="cart.html" class="nav-link nav-cart">Cart <span id="cart-count" class="cart-badge hidden">0</span></a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+  </header>
+
+  <main class="main--success">
+    <div class="card">
+      <div class="success-hero">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h1>Thank you for your order!</h1>
+        <p class="subtitle" style="margin-bottom: 0;">Your order has been confirmed and payment was processed.</p>
+
+        <div class="order-number-box">
+          <div class="label">Payment reference</div>
+          <div class="number" id="payment-id">pi_000000000000000000000000</div>
+          <div class="internal-id">
+            Purchase ID: <span id="purchase-id">-</span>
+          </div>
+        </div>
+
+        <p style="font-size: 0.875rem; color: var(--muted); max-width: 480px; margin: 0 auto;">
+          Customers see the <strong>Stripe payment ID</strong> (<code>pi_…</code>), not the internal order ID.
+          Use this reference when contacting support.
+        </p>
+      </div>
+
+      <div class="tabs">
+        <button type="button" class="tab active" data-tab="details">Order details</button>
+        <button type="button" class="tab" data-tab="email">Confirmation email</button>
+        <a href="dashboard.html" class="tab tab-link">Dashboard</a>
+      </div>
+
+      <div data-panel="details">
+        <div class="detail-grid">
+          <div class="detail-row">
+            <span class="key">Customer</span>
+            <span id="customer-name">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="key">Email</span>
+            <span id="customer-email">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="key">Receipt</span>
+            <a id="pdf-link" href="#" target="_blank" rel="noopener">-</a>
+          </div>
+          <div class="detail-row">
+            <span class="key">Items</span>
+            <span id="order-items">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="key">Total</span>
+            <span id="order-total">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div data-panel="email" class="hidden">
+        <p style="font-size: 0.875rem; color: var(--muted); margin-top: 0;">
+          Preview of the order confirmation email - Stripe payment ID replaces internal ID in customer-facing copy.
+        </p>
+        <div class="email-preview">
+          <div class="email-preview-header">
+            Order Confirmation - special product
+          </div>
+          <div class="email-preview-body">
+            <p>Hi <span id="email-customer-name">Customer</span>,</p>
+            <p>Thank you for your purchase! Here are your order details:</p>
+
+            <div class="email-order-highlight">
+              <strong>Payment reference:</strong> <span id="email-payment-id">pi_000000000000000000000000</span>
+            </div>
+
+            <p>
+              <strong>Item:</strong> <span id="email-product">Premium Widget</span><br />
+              <strong>Total:</strong> <span id="email-total">$249</span>
+            </p>
+
+            <p style="color: var(--muted); font-size: 0.8125rem;">
+              Questions? Reply to this email and reference your payment ID above.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top: 1.5rem; text-align: center; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-secondary">← Back to shop</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" style="width: auto;">Open dashboard</a>
+      </p>
+    </div>
+  </main>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/success.js"></script>
+</body>
+</html>
